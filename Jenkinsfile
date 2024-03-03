@@ -1,6 +1,9 @@
 pipeline {
     agent { label 'workstation'}
     stages {
+        stage('Build') {
+         steps { sh 'npm install'    }
+         }
         stage('Unit Test'){
          steps { echo "Unit testing"  }
          }
